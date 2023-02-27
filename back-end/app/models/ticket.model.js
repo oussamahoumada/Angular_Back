@@ -6,6 +6,6 @@ module.exports = new BaseModel('Ticket', {
   date: Joi.date().required(),
   studentId: Joi.string().required(),
   description: Joi.string(),
-  major: Joi.string(),
+  major: Joi.array().items(Joi.string()),
   archived: Joi.boolean(),
 });
